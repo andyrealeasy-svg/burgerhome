@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *, .dark, .dark *));
+
+@theme {
+  --font-sans: 'Unbounded', sans-serif;
+  --font-heading: 'Unbounded', sans-serif;
+}
+
+:root {
+  font-family: 'Unbounded', sans-serif;
+  color-scheme: light;
+}
+
+html.dark,
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root,
+button,
+input,
+select,
+textarea {
+  font-family: 'Unbounded', sans-serif !important;
+}
+
+body {
+  background-color: #F8F9FA;
+  color: #0F172A;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+html.dark body,
+body.dark {
+  background-color: #121417;
+  color: #FFFFFF;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+html.dark ::-webkit-scrollbar-thumb,
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+}
+html.dark ::-webkit-scrollbar-thumb:hover,
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Remix BURGER HOME",
+  "description": "Премиальные бургеры с быстрой доставкой и самовывозом. Быстрый заказ за 1-2 минуты в BURGER HOME.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
